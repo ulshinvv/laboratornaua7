@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Background Color</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: red;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleBackgroundColor()">Сменить цвет</button>
+
+    <script>
+        function toggleBackgroundColor() {
+            const body = document.body;
+            const currentColor = body.style.backgroundColor;
+
+            if (currentColor === 'red') {
+                body.style.backgroundColor = 'green';
+            } else {
+                body.style.backgroundColor = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
